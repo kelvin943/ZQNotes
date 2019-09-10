@@ -64,3 +64,9 @@
 //删除search_index 执行pod search
 ~/Library/Caches/CocoaPods/search_index.json
 ```
+pod 缓存清理
+
+    ➜ pod cache clean --all
+    ➜ rm -rf ~/Library/Caches/CocoaPods
+
+
