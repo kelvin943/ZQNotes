@@ -1,0 +1,38 @@
+配置多个 ssh 秘钥
+```
+#本地配置文件目录  ~/.ssh/config
+
+Host gitlab.com 
+HostName git.ipo.com
+User  zhangquan526@pingan.com.cn
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_gitlab
+
+Host github.com                        
+Hostname github.com                   
+User quan943@163.com
+PreferredAuthentications publickey               
+IdentityFile ~/.ssh/id_rsa_github
+
+Host gitee.com                        
+Hostname gitee.com                   
+User quan943@163.com 
+PreferredAuthentications publickey              
+IdentityFile ~/.ssh/id_rsa_gitee
+
+
+//生成一对秘钥 (生成是的时候不需要密码)
+➜  ~ ssh-keygen -t rsa -C "quan943@163.com" -f ~/.ssh/id_rsa_github
+//生成一对秘钥
+➜  ~ ssh-keygen -t rsa -C "zhangquan526@pingan.com.cn" -f ~/.ssh/id_rsa_gitlab
+
+//保存到钥匙串
+➜  ~ ssh-add -k ~/.ssh/id_rsa_gitlab
+➜  ~ ssh-add -k ~/.ssh/id_rsa_github
+//查看
+➜  ~ ssh-add -l
+
+//查看里连接是否成
+➜  ~ ssh -T git@gitlab.com
+➜  ~ ssh -T git@github.com
+```
