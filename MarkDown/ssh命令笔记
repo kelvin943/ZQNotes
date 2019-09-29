@@ -4,18 +4,24 @@
 
     Host gitlab.com 
     HostName git.ipo.com
+    AddKeysToAgent YES
+    UseKeychain YES
     User  zhangquan526@pingan.com.cn
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
 
     Host github.com                        
-    Hostname github.com                   
+    Hostname github.com
+    AddKeysToAgent YES
+    UseKeychain YES                   
     User quan943@163.com
     PreferredAuthentications publickey               
     IdentityFile ~/.ssh/id_rsa_github
 
     Host gitee.com                        
-    Hostname gitee.com                   
+    Hostname gitee.com
+    AddKeysToAgent YES
+    UseKeychain YES                   
     User quan943@163.com 
     PreferredAuthentications publickey              
     IdentityFile ~/.ssh/id_rsa_gitee
