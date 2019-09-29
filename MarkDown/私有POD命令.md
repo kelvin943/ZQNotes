@@ -1,5 +1,27 @@
 ### 创建私有POD命令笔记
 
+pod  安装及更新命令
+
+    // Mac OS X 10.11前 
+    -> ~ sudo gem install cocoapods　-v 1.7.4
+
+    //Mac OS X 10.11后   
+    -> ~ sudo gem install -n /usr/local/bin cocoapods        
+    -> ~ sudo gem install -n /usr/local/bin cocoapods --pre    //最新版本
+
+更新本地仓库
+
+    //更新指定本地私有库
+    pod repo update YourPodSpecRepositoryName --verbose
+
+    //更新所有本地spec仓库
+    $pod repo update --verbose  或者
+    $pod setup
+
+    //删除search_index 执行pod search
+    ~/Library/Caches/CocoaPods/search_index.json
+
+
 添加远程spec库到本地    
 
     //相当于把远端的spec仓库克隆到本地的~/.cocoapods目录中
@@ -52,32 +74,6 @@
     #允许编译警告
     --use-libraries
     #使用静态库的方式编译，默认使用framework 方式编译
-
-
-更新本地仓库
-
-    //更新指定本地私有库
-    pod repo update YourPodSpecRepositoryName --verbose
-
-    //更新所有本地spec仓库
-    $pod repo update --verbose  或者
-    $pod setup
-
-    //删除search_index 执行pod search
-    ~/Library/Caches/CocoaPods/search_index.json
-
-
-
-pod  安装及更新命令
-
-    // Mac OS X 10.11前 
-    -> ~ sudo gem install cocoapods　-v 1.7.4
-
-    //Mac OS X 10.11后   
-    -> ~ sudo gem install -n /usr/local/bin cocoapods        
-    -> ~ sudo gem install -n /usr/local/bin cocoapods --pre    //最新版本
-
-
 
 pod 缓存清理
 

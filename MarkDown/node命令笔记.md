@@ -1,4 +1,4 @@
-node 启动和退出
+1.node 启动和退出
 
     //执行一段 node 代码
     ➜  node service.js
@@ -16,8 +16,4 @@ node 启动和退出
     //或者查看该段都对应的PID
     ➜  lsof -i tcp:8888
     ➜  kill -9  PID
-
-
-
-    
 
