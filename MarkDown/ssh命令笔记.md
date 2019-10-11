@@ -2,7 +2,7 @@
 
     #本地配置文件目录  ~/.ssh/config
 
-    Host gitlab.com 
+    Host gitlab.com
     HostName git.ipo.com
     AddKeysToAgent YES
     UseKeychain YES
@@ -10,20 +10,20 @@
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
 
-    Host github.com                        
+    Host github.com
     Hostname github.com
     AddKeysToAgent YES
-    UseKeychain YES                   
+    UseKeychain YES
     User quan943@163.com
-    PreferredAuthentications publickey               
+    PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_github
 
-    Host gitee.com                        
+    Host gitee.com
     Hostname gitee.com
     AddKeysToAgent YES
-    UseKeychain YES                   
-    User quan943@163.com 
-    PreferredAuthentications publickey              
+    UseKeychain YES
+    User quan943@163.com
+    PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitee
 
 2.生成RSA秘钥对命令
@@ -47,6 +47,6 @@
 
     ssh -l 用户名 serviceIP
     ssh -l jenkins 10.59.72.120  -p jenkins
-    
+
     //ssh scp 命令拷贝文件
     scp -r /Users/zhangquan526/.cocoapods/repos/ipo-paspecs/Thirdparty/0.1.18 jenkins@10.59.72.120:/Users/jenkins/.cocoapods/repos/pa/thirdparty
