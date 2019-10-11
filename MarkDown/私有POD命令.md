@@ -5,8 +5,8 @@ pod  安装及更新命令
     // Mac OS X 10.11前 
     -> ~ sudo gem install cocoapods　-v 1.7.4
 
-    //Mac OS X 10.11后   
-    -> ~ sudo gem install -n /usr/local/bin cocoapods        
+    //Mac OS X 10.11后
+    -> ~ sudo gem install -n /usr/local/bin cocoapods
     -> ~ sudo gem install -n /usr/local/bin cocoapods --pre    //最新版本
 
 更新本地仓库
