@@ -1,8 +1,8 @@
-### 创建私有POD命令笔记
+# 创建私有POD命令笔记
 
 pod  安装及更新命令
 
-    // Mac OS X 10.11前 
+    // Mac OS X 10.11前
     -> ~ sudo gem install cocoapods　-v 1.7.4
 
     //Mac OS X 10.11后
@@ -21,12 +21,10 @@ pod  安装及更新命令
     //删除search_index 执行pod search
     ~/Library/Caches/CocoaPods/search_index.json
 
-    //更新cocospod 的concurrent-ruby 解决cdn 报错的问题 
+    //更新cocospod 的concurrent-ruby 解决cdn 报错的问题
     $pod sudo gem install concurrent-ruby
 
-
-
-添加远程spec库到本地    
+添加远程spec库到本地
 
     //相当于把远端的spec仓库克隆到本地的~/.cocoapods目录中
     pod repo add YourPodSpecRepositoryName YourPodSpecRepositoryURL
@@ -44,12 +42,9 @@ pod  安装及更新命令
     - URL:  YourPodSpecRepositoryURL
     - Path: /Users/Macbook/.cocoapods/repos/YourPodSpecRepositoryName
 
-
-
 下载Cocoapods模板
 
     pod lib create YourPod
-
 
 检查spec文件是否合法
 
@@ -66,13 +61,9 @@ pod  安装及更新命令
     pod spec lint
     pod spec lint --allow-warnings
     pod spec lint --allow-warnings  --verbose --use-libraries
-    
+
     //关于 pod spec lint --allow-warnings 报错的 The source_files pattern did not match any file.的解决方法
     //清除  ~/Library/Caches/CocoaPods/Pods/External/xxxxx //6caecc3e367ba2e8852334d3c51e1214-f25d4 目下的文件 （缓存文件）
-
-
-
-
 
 提交 podspec 文件
 
@@ -88,5 +79,3 @@ pod 缓存清理
 
     ➜ pod cache clean --all
     ➜ rm -rf ~/Library/Caches/CocoaPods
-
-
